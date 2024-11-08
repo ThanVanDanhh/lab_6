@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Custom Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit custom challenge</h2>
+            <p class="last-modified">Last modified by sontth1@fpt.com on Apr 01 2024</p>
+            
+            <form class="challenge-form">
+                <div class="form-group">
+                    <label for="title">Challenge Title:</label>
+                    <input type="text" id="title" value="DSA ET Opt7 01">
+                </div>
+
+                <div class="form-group">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Short description:</label>
+                    <input type="text" id="description" value="This is a private challenge">
+                </div>
+
+                <div class="form-group">
+                    <label for="instructions">Instructions:</label>
+                    <textarea id="instructions" rows="5">Write a program to count the number of elements as odd numbers in the array.
+Example: Array A = { 12, 31, 25, 17, 40, 10, 29 }
+=> Number of elements as odd number in array A is : 4</textarea>
+                </div>
+                
+                <div class="test-cases">
+                    <h3>Required Test Cases</h3>
+                    <div class="test-case">
+                        <input type="text" placeholder="Input: 12, 31, 25, 17, 40, 10, 29">
+                        <span>→</span>
+                        <input type="text" placeholder="Output: 4">
+                    </div>
+                    <div class="test-case">
+                        <input type="text" placeholder="Input: 1,2,3,4,5,6,7,8,9,10">
+                        <span>→</span>
+                        <input type="text" placeholder="Output: 5">
+                    </div>
+                    <div class="test-case">
+                        <input type="text" placeholder="Input: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20">
+                        <span>→</span>
+                        <input type="text" placeholder="Output: 10">
+                    </div>
+                    <div class="test-case">
+                        <input type="text" placeholder="Input: 0">
+                        <span>→</span>
+                        <input type="text" placeholder="Output: 0">
+                    </div>
+                    <div class="test-case">
+                        <input type="text" placeholder="Input: 1">
+                        <span>→</span>
+                        <input type="text" placeholder="Output: 1">
+                    </div>
+                    <div class="test-case">
+                        <input type="text" placeholder="Input: 0,2,4,6,8,10">
+                        <span>→</span>
+                        <input type="text" placeholder="Output: 0">
+                    </div>
+                    <div class="test-case">
+                        <input type="text" placeholder="Input: 1,3,5">
+                        <span>→</span>
+                        <input type="text" placeholder="Output: 3">
+                    </div>
+                    <div class="test-case">
+                        <input type="text" placeholder="Input: 8,8,8,8,8,8,8,8,8">
+                        <span>→</span>
+                        <input type="text" placeholder="Output: 0">
+                    </div>
+                    <div class="test-case">
+                        <input type="text" placeholder="Input: 1,1,1,1,1,1,1,1,1,1,1,1,1">
+                        <span>→</span>
+                        <input type="text" placeholder="Output: 13">
+                    </div>
+                </div>
+
+                <button class="update-button">Update custom challenge</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.querySelector('.modal');
+
+        // Get the button that opens the modal
+        var btn = document.querySelector('.update-button');
+
+        // Get the <span> element that closes the modal
+        var span = document.querySelector('.close');
+
+        // When the user clicks on the close button (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Open the modal by default (for testing, you might want to add a button to open it instead)
+        modal.style.display = "block";
+
+        // When the user clicks outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

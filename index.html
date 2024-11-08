@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit Test Custom Challenge</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>New unit test custom challenge</h2> 
+    <div class="card-grid">
+        <!-- Card 1: JavaScript Mocha -->
+        <div class="card">
+            <div class="card-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Logo">
+                <h3>JavaScript <span class="badge">Mocha</span></h3>
+            </div>
+            <p>Use the Mocha testing framework and create unit tests to grade solutions.</p>
+            <div class="button-group">
+                <button class="button continue-btn" onclick="openModal()">Continue</button>
+            <button class="button guide-btn">Guide</button>
+            </div>
+        </div>
+
+        <!-- Card 2: TypeScript Mocha -->
+        <div class="card">
+            <div class="card-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="TypeScript Logo">
+                <h3>TypeScript <span class="badge">Mocha</span></h3>
+            </div>
+            <p>Use the Mocha testing framework and create unit tests to grade solutions.</p>
+            <div class="button-group">
+                <button class="button continue-btn" onclick="openModal()">Continue</button>
+            <button class="button guide-btn">Guide</button>
+            </div>
+        </div>
+
+        <!-- Card 3: Python pytest -->
+        <div class="card">
+            <div class="card-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" alt="Python Logo">
+                <h3>Python <span class="badge">pytest</span></h3>
+            </div>
+            <p>pytest is the most popular and fully-featured Python testing framework.</p>
+            <div class="button-group">
+                <button class="button continue-btn" onclick="openModal()">Continue</button>
+            <button class="button guide-btn">Guide</button>
+            </div>
+        </div>
+
+        <!-- Card 4: PHP PHPUnit -->
+        <div class="card">
+            <div class="card-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" alt="PHP Logo">
+                <h3>PHP <span class="badge">PHPUnit</span></h3>
+            </div>
+            <p>PHPUnit is a programmer-oriented testing framework for PHP.</p>
+            <div class="button-group">
+                <button class="button continue-btn" onclick="openModal()">Continue</button>
+            <button class="button guide-btn">Guide</button>
+            </div>
+        </div>
+
+        <!-- Card 5: Java JUnit -->
+        <div class="card">
+            <div class="card-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java Logo">
+                <h3>Java <span class="badge">JUnit</span></h3>
+            </div>
+            <p>JUnit is a popular unit-testing framework in the Java ecosystem.</p>
+            <div class="button-group">
+                <button class="button continue-btn" onclick="openModal()">Continue</button>
+            <button class="button guide-btn">Guide</button>
+            </div>
+        </div>
+
+        <!-- Card 6: Kotlin JUnit -->
+        <div class="card">
+            <div class="card-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919850.png" alt="Kotlin Logo">
+                <h3>Kotlin <span class="badge">JUnit</span></h3>
+            </div>
+            <p>JUnit is a popular unit-testing framework in the Kotlin ecosystem.</p>
+            <div class="button-group">
+                <button class="button continue-btn" onclick="openModal()">Continue</button>
+            <button class="button guide-btn">Guide</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Enter Challenge Details</h3>
+        <label for="challengeName">Name:</label>
+        <input type="text" id="challengeName" name="challengeName" required><br><br>
+
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select><br><br>
+
+        <a href="details.html" class="onclick">Click here to open the Java (JUnit)IDE and edit your code</a>
+        
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal")) {
+            closeModal();
+        }
+    }
+
+    function redirectToDetails() {
+        const challengeName = document.getElementById("challengeName").value;
+        const difficulty = document.getElementById("difficulty").value;
+        alert(`Challenge Name: ${challengeName}\nDifficulty: ${difficulty}`);
+        // Redirect to the details page or handle as needed
+        // window.location.href = 'details.html'; // Uncomment this line to redirect
+    }
+</script>
+
+</body>
+</html>
